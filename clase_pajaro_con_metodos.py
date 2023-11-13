@@ -1,3 +1,5 @@
+import os
+
 class Pajaro:
     # Atributo de clase
     alas = True
@@ -15,9 +17,14 @@ class Pajaro:
     def volar(self):
         print(f"{self.color} {self.especie} está volando.")
 
+def clear_scream():
+        if os.name == "nt":
+            os.system("cls")
+        
+
 # Crear un objeto llamado piolin
 piolin = Pajaro(color="amarillo", especie="canario")
-
+clear_scream()
 # Acceder a los atributos del objeto
 print(f"Color de Piolín: {piolin.color}")
 print(f"Especie de Piolín: {piolin.especie}")
