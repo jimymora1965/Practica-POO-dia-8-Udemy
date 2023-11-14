@@ -15,7 +15,7 @@ class Personaje:
 
 def limpiar_consola():
     if os.name =="nt":
-        os.system = ("cls")
+        os.system("cls")
         
 limpiar_consola()       
 arquero = Personaje(nombre = "Jimy", cantidad_flechas = 10)
