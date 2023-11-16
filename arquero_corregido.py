@@ -4,7 +4,8 @@ class ArcoFlechas:
     def __init__(self, cantidad_inicial):
         self.cantidad_flechas = cantidad_inicial
 
-    def cargar_flechas(self, cantidad):
+    def cargar_flechas(self):
+        cantidad = int(input("Ingresa la cantidad de flechas que deseas cargar: "))
         self.cantidad_flechas += cantidad
         print(f"Has cargado {cantidad} flechas. Ahora tienes {self.cantidad_flechas} flechas.")
 
@@ -18,7 +19,6 @@ class ArcoFlechas:
     def mostrar_flechas_disponibles(self):
         print(f"Tienes {self.cantidad_flechas} flechas disponibles.")
 
-
 def limpiar_consola():
     os.system('cls')
 
@@ -27,8 +27,8 @@ cantidad_inicial = int(input("Ingresa la cantidad inicial de flechas: "))
 arco = ArcoFlechas(cantidad_inicial)
 
 while True:
-    limpiar_consola()  # Limpia la consola antes de mostrar el menú
-    print("1. Mostrar flechas disponibles")
+    limpiar_consola()
+    print("\n1. Mostrar flechas disponibles")
     print("2. Cargar flechas")
     print("3. Disparar flecha")
     print("0. Salir")
@@ -38,8 +38,7 @@ while True:
     if opcion == "1":
         arco.mostrar_flechas_disponibles()
     elif opcion == "2":
-        cantidad_cargar = int(input("Ingresa la cantidad de flechas que deseas cargar: "))
-        arco.cargar_flechas(cantidad_cargar)
+        arco.cargar_flechas()
     elif opcion == "3":
         arco.disparar_flecha()
     elif opcion == "0":
@@ -48,4 +47,4 @@ while True:
     else:
         print("Opción no válida. Por favor, elige una opción válida.")
     
-    input("Presiona Enter para continuar...")  # Espera a que el usuario presione Enter antes de limpiar la consola nuevamente
+    input("Presiona Enter para continuar...")
