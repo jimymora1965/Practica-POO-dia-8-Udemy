@@ -38,8 +38,8 @@ while True:
     if opcion == "1":
         arco.mostrar_flechas_disponibles()
     elif opcion == "2":
-        cantidad_cargar = int(input("Ingresa la cantidad de flechas que deseas cargar: "))
-        arco.cargar_flechas(cantidad_cargar)
+        cantidad = int(input("Ingresa la cantidad de flechas que deseas cargar: "))
+        arco.cargar_flechas(cantidad)
     elif opcion == "3":
         arco.disparar_flecha()
     elif opcion == "0":

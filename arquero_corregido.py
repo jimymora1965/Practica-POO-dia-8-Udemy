@@ -24,6 +24,7 @@ def limpiar_consola():
 
 # Ejemplo de uso con input
 cantidad_inicial = int(input("Ingresa la cantidad inicial de flechas: "))
+
 arco = ArcoFlechas(cantidad_inicial)
 
 while True:
