@@ -24,16 +24,18 @@ def limpiar_consola():
 cantidad_inicial = int(input("Ingresa la cantidad inicial de flechas:\n"))
 arco = Flechas(cantidad_inicial)
 
-limpiar_consola()
+while True:
+    limpiar_consola()  # Limpiar la consola antes de imprimir el menú
 
-while True:  
-
+    print("Elige una opcion:\n")
     print("1. Mostrar cantidad de flechas disponibles")
     print("2. Cargar flechas")
     print("3. Disparar flecha")
-    print("0. Salir")
+    print("0. Salir\n")
 
-    opcion = input("Elige una opcion:")
+    opcion = input("\n")
+    
+    print(f"Opcion Elegida: {opcion}")
 
     if opcion == "1":
         arco.mostrar_flechas_disponibles()
